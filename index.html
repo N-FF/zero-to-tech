@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人技术博客</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-wrap">
+            <a href="#" class="logo">MyBlog</a>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#articles">文章</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+            <button id="themeBtn" class="theme-btn">🌙</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <header class="banner" id="home">
+        <div class="container banner-content">
+            <h1>欢迎来到我的博客</h1>
+            <p>记录学习、技术与生活随笔</p>
+        </div>
+    </header>
+
+    <!-- 文章列表区域 -->
+    <main class="container" id="articles">
+        <h2 class="section-title">最新文章</h2>
+        <div class="article-list" id="articleList">
+            <!-- JS动态渲染文章卡片 -->
+        </div>
+    </main>
+
+    <!-- 关于 -->
+    <section class="about container" id="about">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-card">
+            <p>一名热爱编程的开发者，分享代码踩坑笔记、学习心得。</p>
+        </div>
+    </section>
+
+    <!-- 回到顶部 -->
+    <button id="backTop" class="back-top">↑</button>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 MyBlog 个人博客</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
