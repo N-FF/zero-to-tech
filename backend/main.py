@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # 加载 .env 文件中的环境变量
 
-ALLOOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS").split(",")
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS").split(",")
 
 
 init_db()  # 初始化数据库
@@ -19,7 +19,7 @@ init_db()  # 初始化数据库
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[ALLOOWED_ORIGINS],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["GET", "POST"],
     allow_credentials=True,          # ← 新增：允许跨源请求带上 cookie
 )
