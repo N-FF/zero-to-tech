@@ -31,6 +31,7 @@ def get_session_id(request: Request, response: Response) -> str:
         response.set_cookie(
             "session_id", sid,
             httponly=True, samesite="lax",
+            secure=True,  # 如果是 https，这里要改成 True
             max_age=60 * 60 * 24 * 30,            # 记 30 天
         )
     return sid
